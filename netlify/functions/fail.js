@@ -1,6 +1,6 @@
 exports.handler = async function(event, context) {
   try {
-    const finalUrl = "https://www.mnmlbynana.com/payment-failed";
+    const finalUrl = "https://www.duris.mk/payment-failed";
     return {
       statusCode: 200,
       headers: { "Content-Type": "text/html" },
