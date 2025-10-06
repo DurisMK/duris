@@ -1,0 +1,13 @@
+[build]
+  publish = "/"          # where your index.html is
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/ok"
+  to   = "/.netlify/functions/ok"
+  status = 200
+
+[[redirects]]
+  from = "/fail"
+  to   = "/.netlify/functions/fail"
+  status = 200
