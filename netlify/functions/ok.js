@@ -30,7 +30,7 @@ exports.handler = async (event) => {
   }
 
   // 3) Build the final thank-you URL
-  let finalUrl = `https://www.mnmlbynana.com/thank-you-page/${orderId}`;
+  let finalUrl = `https://www.duris.mk/thank-you-page/${orderId}`;
   const qs = new URLSearchParams();
   if (orderNumber) qs.set('orderNumber', orderNumber);
   if (objectType)  qs.set('objectType',  objectType);
