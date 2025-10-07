@@ -13,14 +13,14 @@ exports.handler = async (event) => {
   if (!orderId || !transactionId) {
     return {
       statusCode: 302,
-      headers:    { Location: 'https://www.mnmlbynana.com' }
+      headers:    { Location: 'https://www.duris.shop' }
     };
   }
 
   // 2) Call your Wix HTTP function to flip Pending → Paid
   try {
     const wixFnUrl =
-      `https://www.mnmlbynana.com/_functions/updateTransaction`
+      `https://www.duris.shop/_functions/updateTransaction`
       + `?transactionId=${encodeURIComponent(transactionId)}`;
     // Use built-in fetch
     const res = await fetch(wixFnUrl);
@@ -30,7 +30,7 @@ exports.handler = async (event) => {
   }
 
   // 3) Build the final thank-you URL
-  let finalUrl = `https://www.duris.mk/thank-you-page/${orderId}`;
+  let finalUrl = `https://www.duris.shop/thank-you-page/${orderId}`;
   const qs = new URLSearchParams();
   if (orderNumber) qs.set('orderNumber', orderNumber);
   if (objectType)  qs.set('objectType',  objectType);
